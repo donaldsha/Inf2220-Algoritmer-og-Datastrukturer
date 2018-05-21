@@ -1,0 +1,21 @@
+Kompleksitet av noen av metodene brukt i koden:
+Vet ikke om hva er det dere ønsker her, siden etter 2. forsøket fikk jeg tilbakemelding om å fikse den her.
+
+I FileReader.java:
+
+readFile() --> O(n)
+loopTasks() --> O(TaskGenerator.loopTasks()) --> O(n^3)
+sort()-->O(TaskGenerator.sort())-->O(n^2)
+
+i TaskGenerator.java --> her er det mest jeg gjør
+
+update()-->O(n)---Den metoden bruker jeg for å fylle opp hele graphen
+loop()--> O(n)---Den er en av de mest viktigste metoden dfs(hvor jeg gjør dybde forsøk dfs) og bruker den som hjelpe metode for looptasks()
+loopTasks(n*loop)-->(n^2)
+printSort()--> O(n^3+n^2+n^2+n^2)-->O(n^3)--> den er metoden som kan foreberedes
+adTask()-->O(1)
+
+I Task.java klassen det er ikke mye å si siden der det er mest return metoder som har ikke noe kompleksitet.
+
+
+Mest av kompleksiteten er greit, men selvfølgelig det er mye som kan gjøres enklere og bedre for eksempel: printSort og sort kan skrives enklere kanskje med O(logn) istedet.

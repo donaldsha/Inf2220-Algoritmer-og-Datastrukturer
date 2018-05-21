@@ -1,0 +1,138 @@
+Har samarbeidet med Adnan Alisa brnavn: adnanali 
+
+For den løsningen jeg ble inspirert fra Arne Maus sin løsning om venstre radix.
+Etter at jeg kjører Main ser jeg at algoritmen min gjøre bedre med økning av størrelsen til arrayen og til slutt jeg får den 5.91 ganger fortere.
+
+    10^i   |  VenstreRadix   |    Quicksort    |(QS/LR) Differanse     | 
+-----------+-----------------+-----------------+-----------------------|
+    10^1   |    0.048198     |    0.001975     |     0.03424           | 
+-----------+-----------------+-----------------+-----------------------|
+    10^2   |    0.060049     |    0.025284     |     0.41830           | 
+-----------+-----------------+-----------------+-----------------------|
+    10^3   |    0.176988     |    0.441284     |     1.89001           | 
+-----------+-----------------+-----------------+-----------------------|
+    10^4   |    0.934717     |    0.939853     |     0.97700           | 
+-----------+-----------------+-----------------+-----------------------|
+    10^5   |    8.865986     |    20.397456    |     4.06639           | 
+-----------+-----------------+-----------------+-----------------------|
+    10^6   |    26.151142    |    90.193094    |     3.44407           | 
+-----------+-----------------+-----------------+-----------------------|
+    10^7   |    155.030307   |    1056.418042  |     5.915357          | 
+-----------+-----------------+-----------------+-----------------------|
+
+Dette er en stabil fordi den bruker count sort og sorterer fra venstre til høyre. Det den gjør er at det første forekomsten av et tall er den som kommer først, og det er den som gjør at algoritmen er stabil.
+
+--> Resultatet jeg får etter at jeg kjører.
+
+$ java Main
+MAX verdien i Arrayen: 9
+NumBit value i forhold til MAX: 4
+MAX verdien i Arrayen: 9
+NumBit value i forhold til MAX: 4
+MAX verdien i Arrayen: 9
+NumBit value i forhold til MAX: 4
+MAX verdien i Arrayen: 8
+NumBit value i forhold til MAX: 4
+MAX verdien i Arrayen: 9
+NumBit value i forhold til MAX: 4
+Tid for arrayen med lengde 10^1 random tall
+        Venstre Radix:  |       KvikkSort:
+        0.048198        |       0.001975
+
+Differanse mellom de to tidene er: 0.03424123164409924
+
+MAX verdien i Arrayen: 99
+NumBit value i forhold til MAX: 7
+MAX verdien i Arrayen: 99
+NumBit value i forhold til MAX: 7
+MAX verdien i Arrayen: 99
+NumBit value i forhold til MAX: 7
+MAX verdien i Arrayen: 98
+NumBit value i forhold til MAX: 7
+MAX verdien i Arrayen: 98
+NumBit value i forhold til MAX: 7
+Tid for arrayen med lengde 10^2 random tall
+        Venstre Radix:  |       KvikkSort:
+        0.060049        |       0.025284
+
+Differanse mellom de to tidene er: 0.4183045463569585
+
+MAX verdien i Arrayen: 997
+NumBit value i forhold til MAX: 10
+MAX verdien i Arrayen: 998
+NumBit value i forhold til MAX: 10
+MAX verdien i Arrayen: 999
+NumBit value i forhold til MAX: 10
+MAX verdien i Arrayen: 999
+NumBit value i forhold til MAX: 10
+MAX verdien i Arrayen: 996
+NumBit value i forhold til MAX: 10
+Tid for arrayen med lengde 10^3 random tall
+        Venstre Radix:  |       KvikkSort:
+        0.176988        |       0.441284
+
+Differanse mellom de to tidene er: 1.8900129346159449
+
+MAX verdien i Arrayen: 9999
+NumBit value i forhold til MAX: 14
+MAX verdien i Arrayen: 9999
+NumBit value i forhold til MAX: 14
+MAX verdien i Arrayen: 9998
+NumBit value i forhold til MAX: 14
+MAX verdien i Arrayen: 9999
+NumBit value i forhold til MAX: 14
+MAX verdien i Arrayen: 9999
+NumBit value i forhold til MAX: 14
+Tid for arrayen med lengde 10^4 random tall
+        Venstre Radix:  |       KvikkSort:
+        0.934717        |       0.939853
+
+Differanse mellom de to tidene er: 0.9770025447620315
+
+MAX verdien i Arrayen: 99998
+NumBit value i forhold til MAX: 17
+MAX verdien i Arrayen: 99999
+NumBit value i forhold til MAX: 17
+MAX verdien i Arrayen: 99998
+NumBit value i forhold til MAX: 17
+MAX verdien i Arrayen: 99999
+NumBit value i forhold til MAX: 17
+MAX verdien i Arrayen: 99999
+NumBit value i forhold til MAX: 17
+Tid for arrayen med lengde 10^5 random tall
+        Venstre Radix:  |       KvikkSort:
+        8.865986        |       20.397456
+
+Differanse mellom de to tidene er: 4.066393347029219
+
+MAX verdien i Arrayen: 999998
+NumBit value i forhold til MAX: 20
+MAX verdien i Arrayen: 999997
+NumBit value i forhold til MAX: 20
+MAX verdien i Arrayen: 999999
+NumBit value i forhold til MAX: 20
+MAX verdien i Arrayen: 999999
+NumBit value i forhold til MAX: 20
+MAX verdien i Arrayen: 999997
+NumBit value i forhold til MAX: 20
+Tid for arrayen med lengde 10^6 random tall
+        Venstre Radix:  |       KvikkSort:
+        26.151142       |       90.193094
+
+Differanse mellom de to tidene er: 3.4440773238524094
+
+MAX verdien i Arrayen: 9999999
+NumBit value i forhold til MAX: 24
+MAX verdien i Arrayen: 9999998
+NumBit value i forhold til MAX: 24
+MAX verdien i Arrayen: 9999998
+NumBit value i forhold til MAX: 24
+MAX verdien i Arrayen: 9999998
+NumBit value i forhold til MAX: 24
+MAX verdien i Arrayen: 9999997
+NumBit value i forhold til MAX: 24
+Tid for arrayen med lengde 10^7 random tall
+        Venstre Radix:  |       KvikkSort:
+        155.030307      |       1056.418042
+
+Differanse mellom de to tidene er: 5.91535727461814
