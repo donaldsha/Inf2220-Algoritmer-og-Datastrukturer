@@ -30,7 +30,7 @@ class BinaryTree{
 	}
 
 
-	public int right(Node node, int depth){//lagde den metoden for å finne tree dybde siden den forrige ikke fungerte
+	public int right(Node node, int depth){//sjekker dybde ved å gå helt til høyre
 		node.depth1 = depth;
 
 		if (node.rightChild != null) {
@@ -44,7 +44,7 @@ class BinaryTree{
 		return depth;
 	}
 
-	public int left(Node node, int depth){//lagde den metoden for å finne tree dybde siden den forrige ikke fungerte
+	public int left(Node node, int depth){//sjekker dybde på venstre side
 		node.depth1 = depth;
 
 		if (node.leftchild != null) {
@@ -58,7 +58,7 @@ class BinaryTree{
 		return depth;
 	}
 
-	public int maxDepth(){//finner tre dybden
+	public int maxDepth(){//finner max dybden til treet ved å sammenligne høyre og venstre dybde
 		int depth = 0;
 		if (root != null) {
 			Node node = root;
